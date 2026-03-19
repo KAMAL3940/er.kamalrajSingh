@@ -375,6 +375,9 @@ color: #ffff;
     opacity: 0;
     display: none;
   }
+  #home-section.hero{
+    display: none;
+  }
 }
 
 .owl-carousel {
@@ -1163,6 +1166,14 @@ color: #ffff;
 .ftco-hireme h2 span {
   color:  #ffc107;
 }
+@media (max-width: 1199.98px) {
+  .ftco-about{
+    padding-top: 2rem !important;
+  }
+  .ftco-about .img-about .img{
+    min-height: 577px;
+  }
+}
 
 @media (min-width: 992px) {
   .margin-top {
@@ -1599,12 +1610,8 @@ textarea.form-control {
     font-size: 38px;
   }
 
-  .ftco-about .heading-section{
-    text-align: center;
-  }
-
   .ftco-about .heading-section h1.big{
-        left: 24%;
+        left: 0;
         top: 10px;
         font-size: 60px;
   }
@@ -1944,9 +1951,6 @@ textarea.form-control {
   }
   .contact-info{
     margin-bottom: 2rem !important;
-  }
-  .counter-wrap{
-    justify-content: center;
   }
   .counter-wrap .text{
         display: flex;

@@ -76,11 +76,27 @@
 	    }, 500, function() {
 	    	// window.location.hash = href;
 	    });
+
+	    // Close navbar on mobile when nav link clicked
+	    if ($(window).width() <= 1199) {
+	    	$('#ftco-nav').collapse('hide');
+	    	$('.js-fh5co-nav-toggle').removeClass('active');
+	    }
 		});
 
 	};
 
 	onePageClick();
+
+	// Close navbar when clicking outside on mobile
+	$(document).on('click', function(e) {
+		if ($(window).width() <= 1199) {
+			if (!$(e.target).closest('#ftco-navbar').length && $('#ftco-nav').hasClass('show')) {
+				$('#ftco-nav').collapse('hide');
+				$('.js-fh5co-nav-toggle').removeClass('active');
+			}
+		}
+	});
 	
 
 	var carousel = function() {
